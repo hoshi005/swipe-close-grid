@@ -4,3 +4,4 @@
 - タップしたらHero Animation で詳細画面を表示
 - 詳細画面は、下に一定量のスワイプすることで閉じる
 
+![](images/images.gif)
