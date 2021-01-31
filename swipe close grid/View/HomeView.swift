@@ -62,6 +62,12 @@ struct HomeView: View {
             // フラグが立ったら詳細画面を前面に表示.
             if viewModel.showDetail {
                 IdolDetailView(idol: viewModel.selectedIdol, namespace: namespace)
+                    .offset(viewModel.offset)
+                    .gesture(
+                        DragGesture()
+                            .onChanged(onChanged(value:))
+                            .onEnded(onEnded(value:))
+                    )
                     .onTapGesture {
                         withAnimation(.default) {
                             viewModel.showDetail = false
@@ -69,6 +75,21 @@ struct HomeView: View {
                     }
                     .zIndex(3.0)
             }
+        }
+    }
+    
+    func onChanged(value: DragGesture.Value) {
+        
+        // 下方向へのスワイプの場合のみ操作する.
+        if 0 < value.translation.height {
+            viewModel.offset = value.translation
+        }
+    }
+    
+    func onEnded(value: DragGesture.Value) {
+        
+        withAnimation(.default) {
+            viewModel.offset = .zero
         }
     }
 }
