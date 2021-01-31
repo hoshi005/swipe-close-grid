@@ -32,6 +32,7 @@ struct HomeView: View {
             .padding()
             .background(Color.white)
             .shadow(color: Color.primary.opacity(0.08), radius: 5, x: 0, y: 5)
+            .zIndex(1.0)
             
             ScrollView {
                 
@@ -44,6 +45,7 @@ struct HomeView: View {
                 }
                 .padding()
             }
+            .zIndex(0.0)
         }
     }
 }
