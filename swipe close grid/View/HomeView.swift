@@ -46,6 +46,7 @@ struct HomeView: View {
                         ForEach(idols) { idol in
                             
                             IdolCardView(idol: idol, namespace: namespace)
+                                .scaleEffect(viewModel.showDetail && viewModel.selectedIdol.id == idol.id ? viewModel.scale : 1)
                                 .onTapGesture {
                                     withAnimation(.default) {
                                         viewModel.selectedIdol = idol
@@ -62,6 +63,7 @@ struct HomeView: View {
             // フラグが立ったら詳細画面を前面に表示.
             if viewModel.showDetail {
                 IdolDetailView(idol: viewModel.selectedIdol, namespace: namespace)
+                    .scaleEffect(viewModel.scale)
                     .offset(viewModel.offset)
                     .gesture(
                         DragGesture()
@@ -82,7 +84,13 @@ struct HomeView: View {
         
         // 下方向へのスワイプの場合のみ操作する.
         if 0 < value.translation.height {
+            
             viewModel.offset = value.translation
+            
+            // スワイプ量に応じてサイズを小さくしていく(最小でも0.5まで).
+            let screenHeight = UIScreen.main.bounds.height - 50
+            let progress = viewModel.offset.height / screenHeight
+            viewModel.scale = max(0.5, 1 - progress)
         }
     }
     
@@ -95,7 +103,9 @@ struct HomeView: View {
                 viewModel.showDetail = false
             }
             
+            // リセット.
             viewModel.offset = .zero
+            viewModel.scale = 1.0
         }
     }
 }
