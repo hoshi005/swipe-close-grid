@@ -35,7 +35,7 @@ struct HomeView: View {
             
             ScrollView {
                 
-                LazyVGrid(columns: columns) {
+                LazyVGrid(columns: columns, spacing: 8.0) {
                     
                     ForEach(idols) { idol in
                         
