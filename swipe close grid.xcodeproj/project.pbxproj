@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		EF0F18FC25C653580097A8C9 /* IdolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F18FB25C653580097A8C9 /* IdolCardView.swift */; };
+		EF0F190025C6572E0097A8C9 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = EF0F18FF25C6572E0097A8C9 /* DynamicColor */; };
 		EF3BEA7C25C64A0100860DC9 /* swipe_close_gridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BEA7B25C64A0100860DC9 /* swipe_close_gridApp.swift */; };
 		EF3BEA7E25C64A0100860DC9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BEA7D25C64A0100860DC9 /* HomeView.swift */; };
 		EF3BEA8025C64A0400860DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3BEA7F25C64A0400860DC9 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0F190025C6572E0097A8C9 /* DynamicColor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +119,9 @@
 			dependencies = (
 			);
 			name = "swipe close grid";
+			packageProductDependencies = (
+				EF0F18FF25C6572E0097A8C9 /* DynamicColor */,
+			);
 			productName = "swipe close grid";
 			productReference = EF3BEA7825C64A0100860DC9 /* swipe close grid.app */;
 			productType = "com.apple.product-type.application";
@@ -144,6 +149,9 @@
 				Base,
 			);
 			mainGroup = EF3BEA6F25C64A0100860DC9;
+			packageReferences = (
+				EF0F18FE25C6572E0097A8C9 /* XCRemoteSwiftPackageReference "DynamicColor" */,
+			);
 			productRefGroup = EF3BEA7925C64A0100860DC9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EF0F18FE25C6572E0097A8C9 /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/DynamicColor";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EF0F18FF25C6572E0097A8C9 /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EF0F18FE25C6572E0097A8C9 /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EF3BEA7025C64A0100860DC9 /* Project object */;
 }
