@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EF0F18FC25C653580097A8C9 /* IdolCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F18FB25C653580097A8C9 /* IdolCardView.swift */; };
 		EF0F190025C6572E0097A8C9 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = EF0F18FF25C6572E0097A8C9 /* DynamicColor */; };
+		EF0F190325C658E00097A8C9 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F190225C658E00097A8C9 /* Color+Extension.swift */; };
 		EF3BEA7C25C64A0100860DC9 /* swipe_close_gridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BEA7B25C64A0100860DC9 /* swipe_close_gridApp.swift */; };
 		EF3BEA7E25C64A0100860DC9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BEA7D25C64A0100860DC9 /* HomeView.swift */; };
 		EF3BEA8025C64A0400860DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3BEA7F25C64A0400860DC9 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		EF0F18FB25C653580097A8C9 /* IdolCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolCardView.swift; sourceTree = "<group>"; };
+		EF0F190225C658E00097A8C9 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		EF3BEA7825C64A0100860DC9 /* swipe close grid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swipe close grid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3BEA7B25C64A0100860DC9 /* swipe_close_gridApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipe_close_gridApp.swift; sourceTree = "<group>"; };
 		EF3BEA7D25C64A0100860DC9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				EF3BEA8F25C64C5B00860DC9 /* View */,
 				EF3BEA8E25C64C5000860DC9 /* Model */,
 				EF3BEA7B25C64A0100860DC9 /* swipe_close_gridApp.swift */,
+				EF0F190225C658E00097A8C9 /* Color+Extension.swift */,
 				EF3BEA7F25C64A0400860DC9 /* Assets.xcassets */,
 				EF3BEA8425C64A0400860DC9 /* Info.plist */,
 				EF3BEA8125C64A0400860DC9 /* Preview Content */,
@@ -179,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3BEA7E25C64A0100860DC9 /* HomeView.swift in Sources */,
+				EF0F190325C658E00097A8C9 /* Color+Extension.swift in Sources */,
 				EF3BEA9225C64CC200860DC9 /* Idol.swift in Sources */,
 				EF0F18FC25C653580097A8C9 /* IdolCardView.swift in Sources */,
 				EF3BEA7C25C64A0100860DC9 /* swipe_close_gridApp.swift in Sources */,
