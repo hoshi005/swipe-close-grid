@@ -39,9 +39,10 @@ struct HomeView: View {
                     
                     ForEach(idols) { idol in
                         
-                        Text(idol.name)
+                        IdolCardView(idol: idol)
                     }
                 }
+                .padding()
             }
         }
     }
