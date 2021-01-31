@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     
+    let columns = Array(repeating: GridItem(.flexible(), spacing: 8.0), count: 2)
+    
     var body: some View {
         
         VStack(spacing: 0.0) {
@@ -31,7 +33,16 @@ struct HomeView: View {
             .background(Color.white)
             .shadow(color: Color.primary.opacity(0.08), radius: 5, x: 0, y: 5)
             
-            Spacer()
+            ScrollView {
+                
+                LazyVGrid(columns: columns) {
+                    
+                    ForEach(idols) { idol in
+                        
+                        Text(idol.name)
+                    }
+                }
+            }
         }
     }
 }
