@@ -12,12 +12,32 @@ struct IdolCardView: View {
     var idol: Idol
     
     var body: some View {
-        Text(idol.name)
+        
+        VStack {
+            
+            Image(idol.imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+            
+            Text(idol.name)
+                .font(.body)
+                .bold()
+                .foregroundColor(idol.color.accessibleFontColor)
+        }
+        .padding(8.0)
+        .background(idol.color)
+        .cornerRadius(16.0)
     }
 }
 
 struct IdolCardView_Previews: PreviewProvider {
     static var previews: some View {
-        IdolCardView(idol: idols[28])
+        Group {
+            
+            IdolCardView(idol: idols[28])
+                .previewLayout(.fixed(width: 300, height: 300))
+            
+            HomeView()
+        }
     }
 }
