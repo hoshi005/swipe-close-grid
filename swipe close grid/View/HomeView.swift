@@ -8,9 +8,29 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     var body: some View {
-        Text("Hello, world!")
+        
+        VStack(spacing: 0.0) {
+            
+            HStack {
+                Text("アイドル一覧")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.primary)
+                
+                Spacer()
+                
+                Button(action: {}, label: {
+                    Image(systemName: "magnifyingglass")
+                        .font(.title)
+                        .foregroundColor(.primary)
+                })
+            }
             .padding()
+            
+            Spacer()
+        }
     }
 }
 
