@@ -11,6 +11,7 @@
 		EF0F190025C6572E0097A8C9 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = EF0F18FF25C6572E0097A8C9 /* DynamicColor */; };
 		EF0F190325C658E00097A8C9 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F190225C658E00097A8C9 /* Color+Extension.swift */; };
 		EF0F190725C65D3D0097A8C9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F190625C65D3D0097A8C9 /* HomeViewModel.swift */; };
+		EF0F190A25C65DE60097A8C9 /* IdolDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF0F190925C65DE60097A8C9 /* IdolDetailView.swift */; };
 		EF3BEA7C25C64A0100860DC9 /* swipe_close_gridApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BEA7B25C64A0100860DC9 /* swipe_close_gridApp.swift */; };
 		EF3BEA7E25C64A0100860DC9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3BEA7D25C64A0100860DC9 /* HomeView.swift */; };
 		EF3BEA8025C64A0400860DC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3BEA7F25C64A0400860DC9 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 		EF0F18FB25C653580097A8C9 /* IdolCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolCardView.swift; sourceTree = "<group>"; };
 		EF0F190225C658E00097A8C9 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		EF0F190625C65D3D0097A8C9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EF0F190925C65DE60097A8C9 /* IdolDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdolDetailView.swift; sourceTree = "<group>"; };
 		EF3BEA7825C64A0100860DC9 /* swipe close grid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swipe close grid.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3BEA7B25C64A0100860DC9 /* swipe_close_gridApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swipe_close_gridApp.swift; sourceTree = "<group>"; };
 		EF3BEA7D25C64A0100860DC9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				EF3BEA7D25C64A0100860DC9 /* HomeView.swift */,
 				EF0F18FB25C653580097A8C9 /* IdolCardView.swift */,
+				EF0F190925C65DE60097A8C9 /* IdolDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				EF0F190725C65D3D0097A8C9 /* HomeViewModel.swift in Sources */,
 				EF0F190325C658E00097A8C9 /* Color+Extension.swift in Sources */,
 				EF3BEA9225C64CC200860DC9 /* Idol.swift in Sources */,
+				EF0F190A25C65DE60097A8C9 /* IdolDetailView.swift in Sources */,
 				EF0F18FC25C653580097A8C9 /* IdolCardView.swift in Sources */,
 				EF3BEA7C25C64A0100860DC9 /* swipe_close_gridApp.swift in Sources */,
 			);
