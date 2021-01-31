@@ -10,6 +10,7 @@ import SwiftUI
 struct IdolDetailView: View {
     
     var idol: Idol
+    var namespace: Namespace.ID
     
     var body: some View {
         
@@ -18,21 +19,30 @@ struct IdolDetailView: View {
             Image(idol.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .matchedGeometryEffect(id: "\(idol.id)-image", in: namespace)
             
             Text(idol.name)
                 .font(.largeTitle)
                 .bold()
                 .foregroundColor(idol.color.accessibleFontColor)
+                .matchedGeometryEffect(id: "\(idol.id)-title", in: namespace)
             
             Spacer()
         }
         .padding(8.0)
-        .background(idol.color.ignoresSafeArea())
+        .background(
+            idol.color
+                .matchedGeometryEffect(id: "\(idol.id)-bg", in: namespace)
+                .ignoresSafeArea()
+        )
     }
 }
 
 struct IdolDetailView_Previews: PreviewProvider {
+    
+    @Namespace static var namespace
+    
     static var previews: some View {
-        IdolDetailView(idol: idols[28])
+        IdolDetailView(idol: idols[28], namespace: namespace)
     }
 }

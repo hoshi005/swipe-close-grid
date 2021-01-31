@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject private var viewModel = HomeViewModel()
+    @Namespace var namespace
     
     let columns = Array(repeating: GridItem(.flexible(), spacing: 8.0), count: 2)
     
@@ -44,9 +45,9 @@ struct HomeView: View {
                         
                         ForEach(idols) { idol in
                             
-                            IdolCardView(idol: idol)
+                            IdolCardView(idol: idol, namespace: namespace)
                                 .onTapGesture {
-                                    withAnimation(.spring()) {
+                                    withAnimation(.default) {
                                         viewModel.selectedIdol = idol
                                         viewModel.showDetail = true
                                     }
@@ -60,12 +61,13 @@ struct HomeView: View {
             
             // フラグが立ったら詳細画面を前面に表示.
             if viewModel.showDetail {
-                IdolDetailView(idol: viewModel.selectedIdol)
+                IdolDetailView(idol: viewModel.selectedIdol, namespace: namespace)
                     .onTapGesture {
-                        withAnimation(.spring()) {
+                        withAnimation(.default) {
                             viewModel.showDetail = false
                         }
                     }
+                    .zIndex(3.0)
             }
         }
     }
