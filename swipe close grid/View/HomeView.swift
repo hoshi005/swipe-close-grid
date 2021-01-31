@@ -89,6 +89,12 @@ struct HomeView: View {
     func onEnded(value: DragGesture.Value) {
         
         withAnimation(.default) {
+            
+            // 下方向に大きく（300pt）スワイプしたら閉じる.
+            if 300 < value.translation.height {
+                viewModel.showDetail = false
+            }
+            
             viewModel.offset = .zero
         }
     }
