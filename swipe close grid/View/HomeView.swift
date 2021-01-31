@@ -9,6 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @StateObject private var viewModel = HomeViewModel()
+    
     let columns = Array(repeating: GridItem(.flexible(), spacing: 8.0), count: 2)
     
     var body: some View {
