@@ -15,39 +15,47 @@ struct HomeView: View {
     
     var body: some View {
         
-        VStack(spacing: 0.0) {
+        ZStack {
             
-            HStack {
-                Text("アイドル一覧")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.primary)
+            VStack(spacing: 0.0) {
                 
-                Spacer()
-                
-                Button(action: {}, label: {
-                    Image(systemName: "magnifyingglass")
+                HStack {
+                    Text("アイドル一覧")
                         .font(.title)
+                        .bold()
                         .foregroundColor(.primary)
-                })
-            }
-            .padding()
-            .background(Color.white)
-            .shadow(color: Color.primary.opacity(0.08), radius: 5, x: 0, y: 5)
-            .zIndex(1.0)
-            
-            ScrollView {
-                
-                LazyVGrid(columns: columns, spacing: 8.0) {
                     
-                    ForEach(idols) { idol in
-                        
-                        IdolCardView(idol: idol)
-                    }
+                    Spacer()
+                    
+                    Button(action: {}, label: {
+                        Image(systemName: "magnifyingglass")
+                            .font(.title)
+                            .foregroundColor(.primary)
+                    })
                 }
                 .padding()
+                .background(Color.white)
+                .shadow(color: Color.primary.opacity(0.08), radius: 5, x: 0, y: 5)
+                .zIndex(1.0)
+                
+                ScrollView {
+                    
+                    LazyVGrid(columns: columns, spacing: 8.0) {
+                        
+                        ForEach(idols) { idol in
+                            
+                            IdolCardView(idol: idol)
+                        }
+                    }
+                    .padding()
+                }
+                .zIndex(0.0)
             }
-            .zIndex(0.0)
+            
+            // フラグが立ったら詳細画面を前面に表示.
+            if viewModel.showDetail {
+                IdolDetailView(idol: viewModel.selectedIdol)
+            }
         }
     }
 }
