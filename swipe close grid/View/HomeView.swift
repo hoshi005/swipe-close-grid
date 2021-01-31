@@ -45,6 +45,12 @@ struct HomeView: View {
                         ForEach(idols) { idol in
                             
                             IdolCardView(idol: idol)
+                                .onTapGesture {
+                                    withAnimation(.spring()) {
+                                        viewModel.selectedIdol = idol
+                                        viewModel.showDetail = true
+                                    }
+                                }
                         }
                     }
                     .padding()
@@ -55,6 +61,11 @@ struct HomeView: View {
             // フラグが立ったら詳細画面を前面に表示.
             if viewModel.showDetail {
                 IdolDetailView(idol: viewModel.selectedIdol)
+                    .onTapGesture {
+                        withAnimation(.spring()) {
+                            viewModel.showDetail = false
+                        }
+                    }
             }
         }
     }
